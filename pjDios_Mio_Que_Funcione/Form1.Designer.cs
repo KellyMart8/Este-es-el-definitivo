@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -43,24 +43,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnPanini = new System.Windows.Forms.Button();
+            this.btnBurguer = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnSalchipapa = new System.Windows.Forms.Button();
+            this.btnTajadas_Con_Queso = new System.Windows.Forms.Button();
+            this.btnEnchilada = new System.Windows.Forms.Button();
+            this.btnCafe = new System.Windows.Forms.Button();
+            this.btnPinolillo = new System.Windows.Forms.Button();
+            this.btnBatido_Fresa = new System.Windows.Forms.Button();
+            this.btnJugo_Naranja = new System.Windows.Forms.Button();
+            this.btnAgua = new System.Windows.Forms.Button();
+            this.btnCoca_Cola = new System.Windows.Forms.Button();
+            this.btnTres_Lche = new System.Windows.Forms.Button();
+            this.btnBuddin = new System.Windows.Forms.Button();
+            this.btnTorta_Chocolate = new System.Windows.Forms.Button();
+            this.btnTorta_Fresa = new System.Windows.Forms.Button();
+            this.btnCheeseCake = new System.Windows.Forms.Button();
+            this.btnRed_Velvet = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -68,15 +68,16 @@
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnpagar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cboMetodPago = new System.Windows.Forms.ComboBox();
+            this.lblCambio = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBarCode = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
@@ -101,7 +101,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.btnC);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button11);
@@ -127,16 +127,18 @@
             this.button7.TabIndex = 14;
             this.button7.Text = "0";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.SoloNumeros);
             // 
-            // button8
+            // btnC
             // 
-            this.button8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(208, 302);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(77, 68);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "C";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnC.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnC.Location = new System.Drawing.Point(208, 302);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(77, 68);
+            this.btnC.TabIndex = 13;
+            this.btnC.Text = "C";
+            this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // button9
             // 
@@ -147,6 +149,7 @@
             this.button9.TabIndex = 12;
             this.button9.Text = ".";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button10
             // 
@@ -157,6 +160,7 @@
             this.button10.TabIndex = 11;
             this.button10.Text = "5";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button11
             // 
@@ -167,6 +171,7 @@
             this.button11.TabIndex = 10;
             this.button11.Text = "6";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button12
             // 
@@ -177,6 +182,7 @@
             this.button12.TabIndex = 9;
             this.button12.Text = "4";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button4
             // 
@@ -187,6 +193,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "2";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button5
             // 
@@ -197,6 +204,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "1";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button6
             // 
@@ -207,6 +215,7 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "3";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button3
             // 
@@ -217,6 +226,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "8";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button2
             // 
@@ -227,6 +237,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "9";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // button1
             // 
@@ -237,52 +248,55 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "7";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SoloNumeros);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button25);
-            this.panel2.Controls.Add(this.button26);
+            this.panel2.Controls.Add(this.btnPanini);
+            this.panel2.Controls.Add(this.btnBurguer);
             this.panel2.Controls.Add(this.button27);
-            this.panel2.Controls.Add(this.button28);
-            this.panel2.Controls.Add(this.button29);
-            this.panel2.Controls.Add(this.button30);
-            this.panel2.Controls.Add(this.button18);
-            this.panel2.Controls.Add(this.button19);
-            this.panel2.Controls.Add(this.button20);
-            this.panel2.Controls.Add(this.button21);
-            this.panel2.Controls.Add(this.button22);
-            this.panel2.Controls.Add(this.button23);
-            this.panel2.Controls.Add(this.button17);
-            this.panel2.Controls.Add(this.button16);
-            this.panel2.Controls.Add(this.button15);
-            this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button13);
-            this.panel2.Controls.Add(this.button24);
+            this.panel2.Controls.Add(this.btnSalchipapa);
+            this.panel2.Controls.Add(this.btnTajadas_Con_Queso);
+            this.panel2.Controls.Add(this.btnEnchilada);
+            this.panel2.Controls.Add(this.btnCafe);
+            this.panel2.Controls.Add(this.btnPinolillo);
+            this.panel2.Controls.Add(this.btnBatido_Fresa);
+            this.panel2.Controls.Add(this.btnJugo_Naranja);
+            this.panel2.Controls.Add(this.btnAgua);
+            this.panel2.Controls.Add(this.btnCoca_Cola);
+            this.panel2.Controls.Add(this.btnTres_Lche);
+            this.panel2.Controls.Add(this.btnBuddin);
+            this.panel2.Controls.Add(this.btnTorta_Chocolate);
+            this.panel2.Controls.Add(this.btnTorta_Fresa);
+            this.panel2.Controls.Add(this.btnCheeseCake);
+            this.panel2.Controls.Add(this.btnRed_Velvet);
             this.panel2.Location = new System.Drawing.Point(647, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(723, 525);
             this.panel2.TabIndex = 1;
             // 
-            // button25
+            // btnPanini
             // 
-            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
-            this.button25.Location = new System.Drawing.Point(373, 248);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(112, 100);
-            this.button25.TabIndex = 32;
-            this.button25.Text = " ";
-            this.button25.UseVisualStyleBackColor = true;
+            this.btnPanini.Image = ((System.Drawing.Image)(resources.GetObject("btnPanini.Image")));
+            this.btnPanini.Location = new System.Drawing.Point(373, 248);
+            this.btnPanini.Name = "btnPanini";
+            this.btnPanini.Size = new System.Drawing.Size(112, 100);
+            this.btnPanini.TabIndex = 32;
+            this.btnPanini.Text = " ";
+            this.btnPanini.UseVisualStyleBackColor = true;
+            this.btnPanini.Click += new System.EventHandler(this.btnPanini_Click);
             // 
-            // button26
+            // btnBurguer
             // 
-            this.button26.Image = ((System.Drawing.Image)(resources.GetObject("button26.Image")));
-            this.button26.Location = new System.Drawing.Point(491, 248);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(112, 100);
-            this.button26.TabIndex = 31;
-            this.button26.Text = " ";
-            this.button26.UseVisualStyleBackColor = true;
+            this.btnBurguer.Image = ((System.Drawing.Image)(resources.GetObject("btnBurguer.Image")));
+            this.btnBurguer.Location = new System.Drawing.Point(491, 248);
+            this.btnBurguer.Name = "btnBurguer";
+            this.btnBurguer.Size = new System.Drawing.Size(112, 100);
+            this.btnBurguer.TabIndex = 31;
+            this.btnBurguer.Text = " ";
+            this.btnBurguer.UseVisualStyleBackColor = true;
+            this.btnBurguer.Click += new System.EventHandler(this.btnBurguer_Click);
             // 
             // button27
             // 
@@ -293,150 +307,166 @@
             this.button27.TabIndex = 30;
             this.button27.Text = " ";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
-            // button28
+            // btnSalchipapa
             // 
-            this.button28.Image = ((System.Drawing.Image)(resources.GetObject("button28.Image")));
-            this.button28.Location = new System.Drawing.Point(127, 248);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(112, 100);
-            this.button28.TabIndex = 29;
-            this.button28.Text = " ";
-            this.button28.UseVisualStyleBackColor = true;
+            this.btnSalchipapa.Image = ((System.Drawing.Image)(resources.GetObject("btnSalchipapa.Image")));
+            this.btnSalchipapa.Location = new System.Drawing.Point(127, 248);
+            this.btnSalchipapa.Name = "btnSalchipapa";
+            this.btnSalchipapa.Size = new System.Drawing.Size(112, 100);
+            this.btnSalchipapa.TabIndex = 29;
+            this.btnSalchipapa.Text = " ";
+            this.btnSalchipapa.UseVisualStyleBackColor = true;
+            this.btnSalchipapa.Click += new System.EventHandler(this.btnSalchipapa_Click);
             // 
-            // button29
+            // btnTajadas_Con_Queso
             // 
-            this.button29.Image = ((System.Drawing.Image)(resources.GetObject("button29.Image")));
-            this.button29.Location = new System.Drawing.Point(245, 248);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(112, 100);
-            this.button29.TabIndex = 28;
-            this.button29.Text = " ";
-            this.button29.UseVisualStyleBackColor = true;
+            this.btnTajadas_Con_Queso.Image = ((System.Drawing.Image)(resources.GetObject("btnTajadas_Con_Queso.Image")));
+            this.btnTajadas_Con_Queso.Location = new System.Drawing.Point(245, 248);
+            this.btnTajadas_Con_Queso.Name = "btnTajadas_Con_Queso";
+            this.btnTajadas_Con_Queso.Size = new System.Drawing.Size(112, 100);
+            this.btnTajadas_Con_Queso.TabIndex = 28;
+            this.btnTajadas_Con_Queso.Text = " ";
+            this.btnTajadas_Con_Queso.UseVisualStyleBackColor = true;
+            this.btnTajadas_Con_Queso.Click += new System.EventHandler(this.btnTajadas_Con_Queso_Click);
             // 
-            // button30
+            // btnEnchilada
             // 
-            this.button30.Image = ((System.Drawing.Image)(resources.GetObject("button30.Image")));
-            this.button30.Location = new System.Drawing.Point(9, 248);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(112, 100);
-            this.button30.TabIndex = 27;
-            this.button30.Text = " ";
-            this.button30.UseVisualStyleBackColor = true;
+            this.btnEnchilada.Image = ((System.Drawing.Image)(resources.GetObject("btnEnchilada.Image")));
+            this.btnEnchilada.Location = new System.Drawing.Point(9, 248);
+            this.btnEnchilada.Name = "btnEnchilada";
+            this.btnEnchilada.Size = new System.Drawing.Size(112, 100);
+            this.btnEnchilada.TabIndex = 27;
+            this.btnEnchilada.Text = " ";
+            this.btnEnchilada.UseVisualStyleBackColor = true;
+            this.btnEnchilada.Click += new System.EventHandler(this.btnEnchilada_Click);
             // 
-            // button18
+            // btnCafe
             // 
-            this.button18.Image = ((System.Drawing.Image)(resources.GetObject("button18.Image")));
-            this.button18.Location = new System.Drawing.Point(373, 122);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(112, 100);
-            this.button18.TabIndex = 26;
-            this.button18.Text = " ";
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnCafe.Image = ((System.Drawing.Image)(resources.GetObject("btnCafe.Image")));
+            this.btnCafe.Location = new System.Drawing.Point(373, 122);
+            this.btnCafe.Name = "btnCafe";
+            this.btnCafe.Size = new System.Drawing.Size(112, 100);
+            this.btnCafe.TabIndex = 26;
+            this.btnCafe.Text = " ";
+            this.btnCafe.UseVisualStyleBackColor = true;
+            this.btnCafe.Click += new System.EventHandler(this.btnCafe_Click);
             // 
-            // button19
+            // btnPinolillo
             // 
-            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
-            this.button19.Location = new System.Drawing.Point(491, 122);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(112, 100);
-            this.button19.TabIndex = 25;
-            this.button19.Text = " ";
-            this.button19.UseVisualStyleBackColor = true;
+            this.btnPinolillo.Image = ((System.Drawing.Image)(resources.GetObject("btnPinolillo.Image")));
+            this.btnPinolillo.Location = new System.Drawing.Point(491, 122);
+            this.btnPinolillo.Name = "btnPinolillo";
+            this.btnPinolillo.Size = new System.Drawing.Size(112, 100);
+            this.btnPinolillo.TabIndex = 25;
+            this.btnPinolillo.Text = " ";
+            this.btnPinolillo.UseVisualStyleBackColor = true;
+            this.btnPinolillo.Click += new System.EventHandler(this.btnPinolillo_Click);
             // 
-            // button20
+            // btnBatido_Fresa
             // 
-            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
-            this.button20.Location = new System.Drawing.Point(609, 122);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(112, 100);
-            this.button20.TabIndex = 24;
-            this.button20.Text = " ";
-            this.button20.UseVisualStyleBackColor = true;
+            this.btnBatido_Fresa.Image = ((System.Drawing.Image)(resources.GetObject("btnBatido_Fresa.Image")));
+            this.btnBatido_Fresa.Location = new System.Drawing.Point(609, 122);
+            this.btnBatido_Fresa.Name = "btnBatido_Fresa";
+            this.btnBatido_Fresa.Size = new System.Drawing.Size(112, 100);
+            this.btnBatido_Fresa.TabIndex = 24;
+            this.btnBatido_Fresa.Text = " ";
+            this.btnBatido_Fresa.UseVisualStyleBackColor = true;
+            this.btnBatido_Fresa.Click += new System.EventHandler(this.btnBatido_Fresa_Click);
             // 
-            // button21
+            // btnJugo_Naranja
             // 
-            this.button21.Image = ((System.Drawing.Image)(resources.GetObject("button21.Image")));
-            this.button21.Location = new System.Drawing.Point(127, 122);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(112, 100);
-            this.button21.TabIndex = 23;
-            this.button21.Text = " ";
-            this.button21.UseVisualStyleBackColor = true;
+            this.btnJugo_Naranja.Image = ((System.Drawing.Image)(resources.GetObject("btnJugo_Naranja.Image")));
+            this.btnJugo_Naranja.Location = new System.Drawing.Point(127, 122);
+            this.btnJugo_Naranja.Name = "btnJugo_Naranja";
+            this.btnJugo_Naranja.Size = new System.Drawing.Size(112, 100);
+            this.btnJugo_Naranja.TabIndex = 23;
+            this.btnJugo_Naranja.Text = " ";
+            this.btnJugo_Naranja.UseVisualStyleBackColor = true;
+            this.btnJugo_Naranja.Click += new System.EventHandler(this.btnJugo_Naranja_Click);
             // 
-            // button22
+            // btnAgua
             // 
-            this.button22.Image = ((System.Drawing.Image)(resources.GetObject("button22.Image")));
-            this.button22.Location = new System.Drawing.Point(245, 122);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(112, 100);
-            this.button22.TabIndex = 22;
-            this.button22.Text = " ";
-            this.button22.UseVisualStyleBackColor = true;
+            this.btnAgua.Image = ((System.Drawing.Image)(resources.GetObject("btnAgua.Image")));
+            this.btnAgua.Location = new System.Drawing.Point(245, 122);
+            this.btnAgua.Name = "btnAgua";
+            this.btnAgua.Size = new System.Drawing.Size(112, 100);
+            this.btnAgua.TabIndex = 22;
+            this.btnAgua.Text = " ";
+            this.btnAgua.UseVisualStyleBackColor = true;
+            this.btnAgua.Click += new System.EventHandler(this.btnAgua_Click);
             // 
-            // button23
+            // btnCoca_Cola
             // 
-            this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
-            this.button23.Location = new System.Drawing.Point(9, 122);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(112, 100);
-            this.button23.TabIndex = 21;
-            this.button23.Text = " ";
-            this.button23.UseVisualStyleBackColor = true;
+            this.btnCoca_Cola.Image = ((System.Drawing.Image)(resources.GetObject("btnCoca_Cola.Image")));
+            this.btnCoca_Cola.Location = new System.Drawing.Point(9, 122);
+            this.btnCoca_Cola.Name = "btnCoca_Cola";
+            this.btnCoca_Cola.Size = new System.Drawing.Size(112, 100);
+            this.btnCoca_Cola.TabIndex = 21;
+            this.btnCoca_Cola.Text = " ";
+            this.btnCoca_Cola.UseVisualStyleBackColor = true;
+            this.btnCoca_Cola.Click += new System.EventHandler(this.btnCoca_Cola_Click);
             // 
-            // button17
+            // btnTres_Lche
             // 
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
-            this.button17.Location = new System.Drawing.Point(373, -2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(112, 100);
-            this.button17.TabIndex = 20;
-            this.button17.UseVisualStyleBackColor = true;
+            this.btnTres_Lche.Image = ((System.Drawing.Image)(resources.GetObject("btnTres_Lche.Image")));
+            this.btnTres_Lche.Location = new System.Drawing.Point(373, -2);
+            this.btnTres_Lche.Name = "btnTres_Lche";
+            this.btnTres_Lche.Size = new System.Drawing.Size(112, 100);
+            this.btnTres_Lche.TabIndex = 20;
+            this.btnTres_Lche.UseVisualStyleBackColor = true;
+            this.btnTres_Lche.Click += new System.EventHandler(this.btnTres_Lche_Click);
             // 
-            // button16
+            // btnBuddin
             // 
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.Location = new System.Drawing.Point(491, -2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(112, 100);
-            this.button16.TabIndex = 19;
-            this.button16.UseVisualStyleBackColor = true;
+            this.btnBuddin.Image = ((System.Drawing.Image)(resources.GetObject("btnBuddin.Image")));
+            this.btnBuddin.Location = new System.Drawing.Point(491, -2);
+            this.btnBuddin.Name = "btnBuddin";
+            this.btnBuddin.Size = new System.Drawing.Size(112, 100);
+            this.btnBuddin.TabIndex = 19;
+            this.btnBuddin.UseVisualStyleBackColor = true;
+            this.btnBuddin.Click += new System.EventHandler(this.btnBuddin_Click);
             // 
-            // button15
+            // btnTorta_Chocolate
             // 
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(609, -2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(112, 100);
-            this.button15.TabIndex = 18;
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnTorta_Chocolate.Image = ((System.Drawing.Image)(resources.GetObject("btnTorta_Chocolate.Image")));
+            this.btnTorta_Chocolate.Location = new System.Drawing.Point(609, -2);
+            this.btnTorta_Chocolate.Name = "btnTorta_Chocolate";
+            this.btnTorta_Chocolate.Size = new System.Drawing.Size(112, 100);
+            this.btnTorta_Chocolate.TabIndex = 18;
+            this.btnTorta_Chocolate.UseVisualStyleBackColor = true;
+            this.btnTorta_Chocolate.Click += new System.EventHandler(this.btnTorta_Chocolate_Click);
             // 
-            // button14
+            // btnTorta_Fresa
             // 
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(127, -2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(112, 100);
-            this.button14.TabIndex = 17;
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnTorta_Fresa.Image = ((System.Drawing.Image)(resources.GetObject("btnTorta_Fresa.Image")));
+            this.btnTorta_Fresa.Location = new System.Drawing.Point(127, -2);
+            this.btnTorta_Fresa.Name = "btnTorta_Fresa";
+            this.btnTorta_Fresa.Size = new System.Drawing.Size(112, 100);
+            this.btnTorta_Fresa.TabIndex = 17;
+            this.btnTorta_Fresa.UseVisualStyleBackColor = true;
+            this.btnTorta_Fresa.Click += new System.EventHandler(this.btnTorta_Fresa_Click);
             // 
-            // button13
+            // btnCheeseCake
             // 
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(245, -2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(112, 100);
-            this.button13.TabIndex = 16;
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnCheeseCake.Image = ((System.Drawing.Image)(resources.GetObject("btnCheeseCake.Image")));
+            this.btnCheeseCake.Location = new System.Drawing.Point(245, -2);
+            this.btnCheeseCake.Name = "btnCheeseCake";
+            this.btnCheeseCake.Size = new System.Drawing.Size(112, 100);
+            this.btnCheeseCake.TabIndex = 16;
+            this.btnCheeseCake.UseVisualStyleBackColor = true;
+            this.btnCheeseCake.Click += new System.EventHandler(this.btnCheeseCake_Click);
             // 
-            // button24
+            // btnRed_Velvet
             // 
-            this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
-            this.button24.Location = new System.Drawing.Point(9, -2);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(112, 100);
-            this.button24.TabIndex = 15;
-            this.button24.UseVisualStyleBackColor = true;
+            this.btnRed_Velvet.Image = ((System.Drawing.Image)(resources.GetObject("btnRed_Velvet.Image")));
+            this.btnRed_Velvet.Location = new System.Drawing.Point(9, -2);
+            this.btnRed_Velvet.Name = "btnRed_Velvet";
+            this.btnRed_Velvet.Size = new System.Drawing.Size(112, 100);
+            this.btnRed_Velvet.TabIndex = 15;
+            this.btnRed_Velvet.UseVisualStyleBackColor = true;
+            this.btnRed_Velvet.Click += new System.EventHandler(this.btnRed_Velvet_Click);
             // 
             // panel3
             // 
@@ -480,8 +510,9 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(156, 80);
             this.btnEliminar.TabIndex = 36;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Eliminar Elemeto";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnReiniciar
             // 
@@ -492,6 +523,7 @@
             this.btnReiniciar.TabIndex = 35;
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnpagar
             // 
@@ -502,13 +534,14 @@
             this.btnpagar.TabIndex = 34;
             this.btnpagar.Text = "Pagar";
             this.btnpagar.UseVisualStyleBackColor = true;
+            this.btnpagar.Click += new System.EventHandler(this.btnpagar_Click);
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.cboMetodPago);
+            this.panel5.Controls.Add(this.lblCambio);
+            this.panel5.Controls.Add(this.lblCosto);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label13);
@@ -517,27 +550,40 @@
             this.panel5.Size = new System.Drawing.Size(413, 189);
             this.panel5.TabIndex = 34;
             // 
-            // label8
+            // cboMetodPago
             // 
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(173, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(204, 23);
-            this.label8.TabIndex = 5;
-            this.label8.Text = " ";
+            this.cboMetodPago.FormattingEnabled = true;
+            this.cboMetodPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Visa Card",
+            "Masterd Card"});
+            this.cboMetodPago.Location = new System.Drawing.Point(173, 30);
+            this.cboMetodPago.Name = "cboMetodPago";
+            this.cboMetodPago.Size = new System.Drawing.Size(204, 23);
+            this.cboMetodPago.TabIndex = 6;
+            this.cboMetodPago.Text = " ";
             // 
-            // label9
+            // lblCambio
             // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(173, 78);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(203, 23);
-            this.label9.TabIndex = 4;
-            this.label9.Text = " 0";
+            this.lblCambio.BackColor = System.Drawing.Color.White;
+            this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCambio.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCambio.Location = new System.Drawing.Point(173, 138);
+            this.lblCambio.Name = "lblCambio";
+            this.lblCambio.Size = new System.Drawing.Size(204, 23);
+            this.lblCambio.TabIndex = 5;
+            this.lblCambio.Text = " ";
+            // 
+            // lblCosto
+            // 
+            this.lblCosto.BackColor = System.Drawing.Color.White;
+            this.lblCosto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCosto.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCosto.Location = new System.Drawing.Point(173, 78);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(203, 23);
+            this.lblCosto.TabIndex = 4;
+            this.lblCosto.Text = " 0";
             // 
             // label11
             // 
@@ -572,9 +618,9 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lblTotal);
+            this.panel4.Controls.Add(this.lblTax);
+            this.panel4.Controls.Add(this.lblSubtotal);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -583,38 +629,38 @@
             this.panel4.Size = new System.Drawing.Size(413, 189);
             this.panel4.TabIndex = 33;
             // 
-            // label5
+            // lblTotal
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(173, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = " ";
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTotal.Location = new System.Drawing.Point(173, 138);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(204, 23);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = " ";
             // 
-            // label6
+            // lblTax
             // 
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(173, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 23);
-            this.label6.TabIndex = 4;
-            this.label6.Text = " ";
+            this.lblTax.BackColor = System.Drawing.Color.White;
+            this.lblTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTax.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTax.Location = new System.Drawing.Point(173, 78);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(203, 23);
+            this.lblTax.TabIndex = 4;
+            this.lblTax.Text = " ";
             // 
-            // label7
+            // lblSubtotal
             // 
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(173, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(201, 23);
-            this.label7.TabIndex = 3;
-            this.label7.Text = " ";
+            this.lblSubtotal.BackColor = System.Drawing.Color.White;
+            this.lblSubtotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSubtotal.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSubtotal.Location = new System.Drawing.Point(173, 23);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(201, 23);
+            this.lblSubtotal.TabIndex = 3;
+            this.lblSubtotal.Text = " ";
             // 
             // label4
             // 
@@ -684,15 +730,6 @@
             this.lblBarCode.TabIndex = 4;
             this.lblBarCode.Text = " ";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 23);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = " ";
-            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -703,6 +740,10 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // Form1
             // 
@@ -717,6 +758,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -750,45 +792,45 @@
         private DataGridViewTextBoxColumn Column3;
         private Label lblBarCode;
         private Button button7;
-        private Button button8;
+        private Button btnC;
         private Button button9;
-        private Button button24;
-        private Button button25;
-        private Button button26;
+        private Button btnRed_Velvet;
+        private Button btnPanini;
+        private Button btnBurguer;
         private Button button27;
-        private Button button28;
-        private Button button29;
-        private Button button30;
-        private Button button18;
-        private Button button19;
-        private Button button20;
-        private Button button21;
-        private Button button22;
-        private Button button23;
-        private Button button17;
-        private Button button16;
-        private Button button15;
-        private Button button14;
-        private Button button13;
+        private Button btnSalchipapa;
+        private Button btnTajadas_Con_Queso;
+        private Button btnEnchilada;
+        private Button btnCafe;
+        private Button btnPinolillo;
+        private Button btnBatido_Fresa;
+        private Button btnJugo_Naranja;
+        private Button btnAgua;
+        private Button btnCoca_Cola;
+        private Button btnTres_Lche;
+        private Button btnBuddin;
+        private Button btnTorta_Chocolate;
+        private Button btnTorta_Fresa;
+        private Button btnCheeseCake;
         private Panel panel6;
         private Button btnImprimir;
         private Button btnEliminar;
         private Button btnReiniciar;
         private Button btnpagar;
         private Panel panel5;
-        private Label label8;
-        private Label label9;
+        private Label lblCambio;
+        private Label lblCosto;
         private Label label11;
         private Label label12;
         private Label label13;
         private Panel panel4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
+        private Label lblTotal;
+        private Label lblTax;
+        private Label lblSubtotal;
         private Label label4;
         private Label label2;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cboMetodPago;
         private PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
     }
