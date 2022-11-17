@@ -583,7 +583,6 @@
             this.lblCosto.Name = "lblCosto";
             this.lblCosto.Size = new System.Drawing.Size(203, 23);
             this.lblCosto.TabIndex = 4;
-            this.lblCosto.Text = " 0";
             // 
             // label11
             // 
@@ -591,7 +590,7 @@
             this.label11.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.Location = new System.Drawing.Point(19, 140);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 23);
+            this.label11.Size = new System.Drawing.Size(73, 24);
             this.label11.TabIndex = 2;
             this.label11.Text = "Cambio";
             // 
@@ -601,7 +600,7 @@
             this.label12.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(19, 80);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 23);
+            this.label12.Size = new System.Drawing.Size(57, 24);
             this.label12.TabIndex = 1;
             this.label12.Text = "Costo";
             // 
@@ -611,7 +610,7 @@
             this.label13.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(19, 25);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(144, 23);
+            this.label13.Size = new System.Drawing.Size(144, 24);
             this.label13.TabIndex = 0;
             this.label13.Text = "Metodo de pago";
             // 
@@ -668,7 +667,7 @@
             this.label4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(19, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 23);
+            this.label4.Size = new System.Drawing.Size(53, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Total";
             // 
@@ -678,7 +677,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(19, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 23);
+            this.label2.Size = new System.Drawing.Size(40, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tax";
             // 
@@ -688,7 +687,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(19, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subtotal";
             // 

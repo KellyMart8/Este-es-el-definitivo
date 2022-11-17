@@ -36,10 +36,10 @@ namespace pjDios_Mio_Que_Funcione
 
             if(dataGridView1.Rows.Count > 0)
             {
-                lblTax.Text = String.Format("{0 : C2}", (((Cost_Of_Item() * tax)/100)));
-                lblSubtotal.Text = String.Format("{0 : C2}", (Cost_Of_Item() ));
+                lblTax.Text = ((((Cost_Of_Item() * tax)/100))).ToString();
+                lblSubtotal.Text = ((Cost_Of_Item() )).ToString();
                 q = ((Cost_Of_Item() * tax) / 100);
-                lblTotal.Text = String.Format("{0 : C2}", (Cost_Of_Item() + q));
+                lblTotal.Text = ((Cost_Of_Item() + q)).ToString();
                 lblBarCode.Text = Convert.ToString(q + Cost_Of_Item());
             }
         }
@@ -52,8 +52,8 @@ namespace pjDios_Mio_Que_Funcione
             if (dataGridView1.Rows.Count > 0)
             {
                 q = ((Cost_Of_Item() * tax) / 100) + Cost_Of_Item();
-                c = Convert.ToInt32(lblCosto.Text);
-                lblCambio.Text = String.Format("{0 : C2}", c - q);
+                c = Convert.ToDouble(lblCosto.Text);
+                lblCambio.Text = (c - q).ToString();
             }
         }
 
@@ -118,27 +118,36 @@ namespace pjDios_Mio_Que_Funcione
 
         private void SoloNumeros(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
-
-            if(lblCosto.Text == "0")
+            Button b = (Button) sender;
+            string Numbers = "";
+            if (Numbers == "")
             {
+                Numbers = b.Text;
                 lblCosto.Text = "";
-                lblCosto.Text = b.Text;
             }
             else if(b.Text == ("."))
             {
-                if(! b.Text.Contains("."))
+                lblCosto.Text = "";
+                if (!b.Text.Contains("."))
                 {
-                    lblCosto.Text = lblCosto + b.Text;
+                    double I;
+                    I = Convert.ToDouble(lblCosto.Text) + Convert.ToDouble(b.Text);
+                    lblCosto.Text = I.ToString();
                 }
             }
             else
+            {
+                lblCosto.Text = "";
                 lblCosto.Text = lblCosto + b.Text;
+                MessageBox.Show("Estas fuera");
+            }
+            lblCosto.Text = Numbers;
+                
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            lblCosto.Text = "0";
+            lblCosto.Text = " ";
         }
 
         private void btnpagar_Click(object sender, EventArgs e)
